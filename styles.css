@@ -1,0 +1,218 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-image: url(./img/fondohtml.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.title-first {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: large;
+    font-style: italic;
+}
+
+.nav-logo-a {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    align-items: center;
+    
+  
+}
+
+.logo-de-events {
+    width: 300px;
+    height: auto;
+}
+
+.a-link {
+    display: flex;
+}
+.a-link-nav {
+    display: flex;
+    margin-left: 16px;
+    height: fit-content;
+    padding: 10px;
+    background-color: #ccebb0;
+    text-decoration: none;
+    border: solid 1px black;
+    box-shadow: 2px 2px 2px #858887;
+    border-radius: 6px;
+   
+
+}
+
+.navigation {
+    width: 100%;
+    height: 40px;
+    text-decoration: none;
+  
+
+}
+
+.sub-header {
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #EFEFEF;
+    box-sizing: border-box;
+}
+.conteiner-search {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search_checkbox, .search {
+    margin: 10px ;
+}
+
+
+
+.conteiner-cards {
+    display: flex;
+    grid-template-columns: 2fr;
+}
+
+.info-cards {
+    width: 400px;
+    height: 400px;
+    border: solid 2px black;
+    background-color: #79E6E8;
+    box-shadow: 3px 3px 3px #858887;
+    margin: 15px;
+    text-align: center;
+
+}
+
+.img-card-1 {
+    box-shadow: 3px 3px 3px #858887;
+    width: 300px;
+    height: 200px;
+
+}
+
+
+.img-redes {
+    width: 30px;
+    height: auto;
+}
+
+.conteiner-img {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* upcoming events */
+
+.container-div {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    height: 300px;
+    border: 2px solid black;
+    margin: 100px auto;
+    background-color: #858887;
+    box-shadow: 5px 5px 5px wheat;
+    padding: 16px;
+
+}
+
+.div-img {
+    width: 350px;
+    height: 250px;
+    border: 2px solid black;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: #ccebb0;
+    box-shadow: 5px 5px 5px white;
+}
+
+.div-p {
+    width: 450px;
+    height: 250px;
+    border: 2px solid black;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: #ccebb0;
+    box-shadow: 5px 5px 5px white;
+    text-align: center;
+}
+
+/* contacto */
+
+.form {
+    background-color: #fff;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 1em;
+    padding: 3.5em 1.5em;
+    margin: 100px auto;
+}
+
+.form__container {
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%;
+}
+
+.form__title {
+    text-align: center;
+    font-size: 1.9rem;
+    margin-bottom: .4em;
+}
+
+.form__input {
+    font-size: 1rem;
+    padding: .8em 1em;
+}
+
+.form__input--message {
+    resize: none;
+    padding: 1.8em 1em;
+    margin-bottom: .5em;
+}
+
+.form_cta {
+    background-color: #8EF1F3;
+    color: black;
+    border: none;
+    font-weight: 300;
+    padding: .7em 0;
+    border-radius: .2em;
+    cursor: pointer;
+    font-weight: 400;
+    width: 400px;
+    height: auto;
+}
+
+/* tabla */
+table,
+th,
+td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px white;
+}
+
+.table-container {
+    margin: 100px auto;
+    width: 60%;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+th {
+    text-align: left;
+    background-color: rgb(238, 232, 232);
+}
