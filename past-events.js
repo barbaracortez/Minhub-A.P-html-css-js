@@ -204,11 +204,15 @@ const Card = params => {
 }
 
 data.events.forEach((event) => {
-  const eventDate = new Date(event.date);
-  const currentDate = new Date();
-  
-  if (eventDate.getTime() < currentDate.getTime()) {
-    const cardHTML = Card(event);
-    $cardsContainer.innerHTML += cardHTML;
-  }
-});
+  const cardHTML = Card(event)
+  $cardsContainer.innerHTML += cardHTML
+
+  data.events.forEach((event) => {
+    const eventDate = new Date(event.date);
+    const currentDate = new Date();
+
+    if (eventDate.getTime() > currentDate.getTime()) {
+      const cardHTML = Card(event);
+      $cardsContainer.innerHTML += cardHTML;
+    }
+  })});

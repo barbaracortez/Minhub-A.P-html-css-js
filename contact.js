@@ -1,7 +1,7 @@
 function goBack(){
-    console.log('is atras')
+    window.location.replace("./past-events.html")
 }
 
 function goNext(){
-    window.location.replace("./details.html");
+    window.location.replace("./stats.html");
 }
