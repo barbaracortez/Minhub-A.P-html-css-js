@@ -1,75 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="shortcut icon" href="./img/iconos/Logo  Events.png" type="image/x-icon">
-    <title>Amazing Events</title>
-</head>
-<header class="title-first">
-    <h3>Amazing Events</h3>
-</header>
-<nav class="nav-logo-a">
-    <div>
-        <img src="./img/iconos/Logo Amazing Events.png" alt="logo de eventos" class="logo-de-events">
-    </div>
-    <div class="a-link">
-        <a class="a-link-nav" href="./Home.html">Home</a>
-        <a class="a-link-nav" href="./Upcoming Events.html">Upcoming Events</a>
-        <a class="a-link-nav" href="./Past Events.html">Past Events</a>
-        <a class="a-link-nav" href="./Contact.html">contact</a>
-        <a class="a-link-nav" href="#">Stast</a>
-        <a class="a-link-nav" href="./Details.html">Details</a>
-    </div>
-</nav>
-<div class="sub-header">
-    <span></span>
-    <span> <h3>Stats</h3></span>
-    <span>></span>
-</div>
-<body>
-    <table class="table-container">
-        <tr>
-            <th colspan="3">Events statistics</th>
-        </tr>
-        <tr>
-            <td>Events with highest percentage of attendance</td>
-            <td>Events with highest percentage of attendance</td>
-            <td>Events with highest percentage of attendance</td>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="shortcut icon" href="./img/iconos/Logo  Events.png" type="image/x-icon">
+        <title>Amazing Events</title>
+    </head>
 
-        </tr>
-        <tr>
-            
-            <th colspan="3">Upcoming events statics by category</th>
-            
-        </tr>
-        <tr>
-            <td>Categories</td>
-            <td>Revenues</td>
-            <td>Percentage of attendance</td>
-        </tr>
-        <tr>
-            
-            <th colspan="3">Past Events statics by category</th>
-            
-        </tr>
-        <tr>
-            <td>Categories</td>
-            <td>Revenues</td>
-            <td>Percentage of attendance</td>
-        </tr>
-    </table>
-</body>
-<footer class="conteiner-img">
-    <div> <img src="./img/iconos/instagram.png" alt="" class="img-redes">
-        <img src="./img/iconos/iconoF.png" alt="" class="img-redes">
-        <img src="./img/iconos/whatsap.png" alt="" class="img-redes">
+    <header class="title-first">
+        <h2>Amazing Events</h2>
+    </header>
+
+    <nav class="nav-logo-a">
+        <img src="./img/iconos/logo-amazing-events.png" alt="logo de eventos" class="logo-de-events">
+        <div class="a-link">
+            <a class="a-link-nav" href="./home.html">Home</a>
+            <a class="a-link-nav" href="./upcoming-events.html">Upcoming Events</a>
+            <a class="a-link-nav" href="./past-events.html">Past Events</a>
+            <a class="a-link-nav" href="./contact.html">contact</a>
+            <a class="a-link-nav active" href="#">Stast</a>
+            <a class="a-link-nav" href="./details.html">Details</a>
+        </div>
+    </nav>
+
+    <div class="sub-header">
+        <span class="pointer" onclick="goBack()">&lt;</span>
+        <h3>Stast</h3>
+        <span class="pointer" onclick="goNext()">&gt;</span>
     </div>
-    <div>
-        <p class="cohort">Cohort</p>
-    </div>
-</footer>
+
+    <body>
+        <table class="table-container">
+            <tr>
+                <th colspan="3">Events statistics</th>
+            </tr>
+            <tr>
+                <td>Events with highest percentage of attendance</td>
+                <td>Events with highest percentage of attendance</td>
+                <td>Events with highest percentage of attendance</td>
+
+            </tr>
+            <tr>
+
+                <th colspan="3">Upcoming events statics by category</th>
+
+            </tr>
+            <tr>
+                <td>Categories</td>
+                <td>Revenues</td>
+                <td>Percentage of attendance</td>
+            </tr>
+            <tr>
+
+                <th colspan="3">Past Events statics by category</th>
+
+            </tr>
+            <tr>
+                <td>Categories</td>
+                <td>Revenues</td>
+                <td>Percentage of attendance</td>
+            </tr>
+        </table>
+    </body>
+
+    <footer class="container-img">
+        <div> <img src="./img/iconos/instagram.png" alt="" class="img-redes">
+            <img src="./img/iconos/iconoF.png" alt="" class="img-redes">
+            <img src="./img/iconos/whatsap.png" alt="" class="img-redes">
+        </div>
+        <div>
+            <p class="cohort">Cohort</p>
+        </div>
+    </footer>
+
 </html>
