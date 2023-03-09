@@ -60,6 +60,10 @@ html {
     box-sizing: border-box;
 }
 
+.sub-header h3 {
+    text-transform: uppercase;
+}
+
 .container-search {
     display: flex;
     justify-content: space-between;
@@ -240,6 +244,10 @@ th {
 
 .pointer {
     cursor: pointer;
+}
+
+.category-wrapper{
+    margin-right: 1rem;
 }
 
 /* tablet view */

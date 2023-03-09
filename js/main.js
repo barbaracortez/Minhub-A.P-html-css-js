@@ -21,12 +21,17 @@ function crearCards(arr, contenedor) {
     })
 }
 
+function removeCards(contenedor) {
+    const cardsContainer = document.querySelector(contenedor)
+    cardsContainer.innerHTML = ``
+}
+
 let upComing = []
 let pasEvents = []
 
+let filteredEventsByCategory = []
+
 function filtrarData(arr, dato) {
-    upComing = []
-    pasEvents = []
     arr.forEach((items) => {
         if (items.date > dato) {
             upComing.push(items)
@@ -35,3 +40,43 @@ function filtrarData(arr, dato) {
         }
     })
 }
+
+function getEventsByCategory(event) {
+    if (event.target.checked) {
+        const eventsToAdd = data.events
+            .filter((amazingEvent) => amazingEvent.category === event.target.value)
+            .filter((amazingEvent) => !filteredEventsByCategory.some((e) => e.category === amazingEvent.category));
+
+        filteredEventsByCategory = [...filteredEventsByCategory, ...eventsToAdd];
+    } else {
+        filteredEventsByCategory = filteredEventsByCategory.filter((amazingEvent) => amazingEvent.category !== event.target.value)
+    }
+
+    removeCards("#cardsContainer");
+    crearCards(filteredEventsByCategory, "#cardsContainer");
+
+    if (filteredEventsByCategory.length === 0) {
+        crearCards(data.events, "#cardsContainer");
+    }
+}
+
+const botonBuscar = document.getElementById('buscar');
+botonBuscar.addEventListener('click', (e) => {
+    e.preventDefault();
+    const valorBusqueda = document.getElementById('busqueda').value;
+    console.log('Valor de búsqueda:', valorBusqueda);
+
+    const eventsToAdd = data.events
+        .filter((amazingEvent) => amazingEvent.category.toLowerCase() === valorBusqueda.toLowerCase())
+        .filter((amazingEvent) => !filteredEventsByCategory.some((e) => e.category === amazingEvent.category));
+
+    filteredEventsByCategory = eventsToAdd;
+
+    removeCards("#cardsContainer");
+    crearCards(filteredEventsByCategory, "#cardsContainer");
+
+    if (valorBusqueda === "") {
+        removeCards("#cardsContainer");
+        crearCards(data.events, "#cardsContainer");
+    }
+});

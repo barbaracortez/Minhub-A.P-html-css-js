@@ -34,41 +34,49 @@
 
     <body>
         <div class="container-search">
-            <form action="./index.html" class="search_checkbox">
-                <div>
-                    <input type="checkbox" id="scales" name="scales" value="Category">
-                    <label for="scales">Food Fair</label>
+            <form  class="search_checkbox">
+                <div class="category-wrapper">
+                    <input onChange="getEventsByCategory(event)" type="checkbox" id="Food Fair" name="category"
+                        value="Food Fair">
+                    <label for="Food Fair">Food Fair</label>
                 </div>
-
-                <div><input type="checkbox" id="scales" name="scales" value="Category">
-                    <label for="scales">Museum</label>
+                
+                <div class="category-wrapper">
+                    <input onChange="getEventsByCategory(event)" type="checkbox" id="Museum" name="category" value="Museum">
+                    <label for="Museum">Museum</label>
                 </div>
-
-
-                <div><input type="checkbox" id="scales" name="scales" value="Category">
-                    <label for="scales">Costumbre Party</label>
+    
+                <div class="category-wrapper">
+                    <input onChange="getEventsByCategory(event)"  type="checkbox" id="scales" name="scales" value="Costume Party">
+                    <label for="Costume Party">Costume Party</label>
                 </div>
-
-                <div><input type="checkbox" id="scales" name="scales" value="Category">
-                    <label for="scales">Music Concert</label>
+    
+                <div class="category-wrapper">
+                    <input onChange="getEventsByCategory(event)" type="checkbox" id="scales" name="scales" value="Music Concert">
+                    <label for="Music Concert">Music Concert</label>
                 </div>
-
-                <div>
-                    <input type="checkbox" id="scales" name="scales" value="Category">
-                    <label for="scales">Race</label>
+    
+                <div class="category-wrapper">
+                    <input onChange="getEventsByCategory(event)" type="checkbox" id="Race" name="category" value="Race">
+                    <label for="Race">Race</label>
                 </div>
-
-                <div><input type="checkbox" id="scales" name="scales" value="Category">
-                    <label for="scales">Box exChange</label>
-                </div>
-
-                <div><input type="checkbox" id="scales" name="scales" value="Category">
-                    <label for="scales">Cinema</label>
-                </div>
-
-
+            
+                 <div class="category-wrapper">
+                    <input onChange="getEventsByCategory(event)" type="checkbox" id="scales" name="scales" value="Box Exchange">
+                    <label for="Box Exchange">Box Exchange</label>
+                </div> 
+    
+                <div class="category-wrapper">
+                    <input onChange="getEventsByCategory(event)" type="checkbox" id="scales" name="scales" value="Cinema">
+                    <label for="cinema">Cinema</label>
+                </div> 
             </form>
-
+    
+    
+            <form class="search">
+                <input type="search" name="busqueda" id="busqueda" placeholder="Próximos eventos">
+                <button id="buscar" click="botonBuscar()">Buscar</button>
+            </form>
         </div>
 
         <div id="cardsContainer" class="container-cards"></div>

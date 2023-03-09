@@ -1,93 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/styles.css">
-        <link rel="shortcut icon" href="../css/img/iconos/logo-events.png" type="image/x-icon">
-        <title>Amazing Events</title>
-    </head>
 
-    <header class="title-first">
-        <h2>Amazing Events</h2>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="shortcut icon" href="../css/img/iconos/logo-events.png" type="image/x-icon">
+    <title>Amazing Events</title>
+</head>
 
-    <nav class="nav-logo-a">
-        <img src="../css/img/iconos/logo-amazing-events.png" alt="logo de eventos" class="logo-de-events">
-        <div class="a-link">
-            <a class="a-link-nav" href="../html/home.html">Home</a>
-            <a class="a-link-nav" href="../html/upcoming-events.html">Upcoming Events</a>
-            <a class="a-link-nav active" href="#">Past Events</a>
-            <a class="a-link-nav" href="../html/contact.html">Contact</a>
-            <a class="a-link-nav" href="../html/stats.html">Stast</a>
-            <a class="a-link-nav" href="../html/details.html">Details</a>
-        </div>
-    </nav>
+<header class="title-first">
+    <h2>Amazing Events</h2>
+</header>
 
-    <div class="sub-header">
-        <span class="pointer" onclick="goBack()">&lt;</span>
-        <h3>Past events</h3>
-        <span class="pointer" onclick="goNext()">&gt;</span>
+<nav class="nav-logo-a">
+    <img src="../css/img/iconos/logo-amazing-events.png" alt="logo de eventos" class="logo-de-events">
+    <div class="a-link">
+        <a class="a-link-nav" href="../html/home.html">Home</a>
+        <a class="a-link-nav" href="../html/upcoming-events.html">Upcoming Events</a>
+        <a class="a-link-nav active" href="#">Past Events</a>
+        <a class="a-link-nav" href="../html/contact.html">Contact</a>
+        <a class="a-link-nav" href="../html/stats.html">Stast</a>
+        <a class="a-link-nav" href="../html/details.html">Details</a>
     </div>
-    <body>
-        <div class="container-search">
-            <form action="./index.html" class="search_checkbox">
-                <div>
-                    <input type="checkbox" id="scales" name="scales" value="Category">
-                    <label for="scales">Food Fair</label>
-                </div>
+</nav>
 
-                <div><input type="checkbox" id="scales" name="scales" value="Category">
-                    <label for="scales">Museum</label>
-                </div>
+<div class="sub-header">
+    <span class="pointer" onclick="goBack()">&lt;</span>
+    <h3>Past events</h3>
+    <span class="pointer" onclick="goNext()">&gt;</span>
+</div>
+
+<body>
+    <div class="container-search">
+        <form  class="search_checkbox">
+            <div class="category-wrapper">
+                <input onChange="getEventsByCategory(event)" type="checkbox" id="Food Fair" name="category"
+                    value="Food Fair">
+                <label for="Food Fair">Food Fair</label>
+            </div>
+            
+            <div class="category-wrapper">
+                <input onChange="getEventsByCategory(event)" type="checkbox" id="Museum" name="category" value="Museum">
+                <label for="Museum">Museum</label>
+            </div>
+
+            <div class="category-wrapper">
+                <input onChange="getEventsByCategory(event)"  type="checkbox" id="scales" name="scales" value="Costume Party">
+                <label for="Costume Party">Costume Party</label>
+            </div>
+
+            <div class="category-wrapper">
+                <input onChange="getEventsByCategory(event)" type="checkbox" id="scales" name="scales" value="Music Concert">
+                <label for="Music Concert">Music Concert</label>
+            </div>
+
+            <div class="category-wrapper">
+                <input onChange="getEventsByCategory(event)" type="checkbox" id="Race" name="category" value="Race">
+                <label for="Race">Race</label>
+            </div>
+        
+             <div class="category-wrapper">
+                <input onChange="getEventsByCategory(event)" type="checkbox" id="scales" name="scales" value="Box Exchange">
+                <label for="Box Exchange">Box Exchange</label>
+            </div> 
+
+            <div class="category-wrapper">
+                <input onChange="getEventsByCategory(event)" type="checkbox" id="scales" name="scales" value="Cinema">
+                <label for="cinema">Cinema</label>
+            </div> 
+        </form>
 
 
-                <div><input type="checkbox" id="scales" name="scales" value="Category">
-                    <label for="scales">Costumbre Party</label>
-                </div>
+        <form class="search">
+            <input type="search" name="busqueda" id="busqueda" placeholder="Próximos eventos">
+            <button id="buscar" click="botonBuscar()">Buscar</button>
+        </form>
+    </div>
 
-                <div><input type="checkbox" id="scales" name="scales" value="Category">
-                    <label for="scales">Music Concert</label>
-                </div>
+    <div id="cardsContainer" class="container-cards"></div>
+</body>
 
-                <div>
-                    <input type="checkbox" id="scales" name="scales" value="Category">
-                    <label for="scales">Race</label>
-                </div>
+<footer class="container-img">
+    <div> <img src="../css/img/iconos/instagram2.png" alt="" class="img-redes">
+        <img src="../css/img/iconos/iconoF.png" alt="" class="img-redes">
+        <img src="../css/img/iconos/whatsap.png" alt="" class="img-redes">
+    </div>
+    <div>
+        <p class="cohort">Cohort</p>
+    </div>
+</footer>
 
-                <div><input type="checkbox" id="scales" name="scales" value="Category">
-                    <label for="scales">Box exChange</label>
-                </div>
+<script src="../js/main.js"></script>
+<script src="../js/data.js"></script>
+<script src="../js/past-events.js"></script>
 
-                <div><input type="checkbox" id="scales" name="scales" value="Category">
-                    <label for="scales">Cinema</label>
-                </div>
-
-
-            </form>
-
-            <form action="./index.html" method="get" target="_blank" class="search">
-                <input type="search" name="busqueda" placeholder="Próximos eventos">
-                <input type="submit" value="Buscar" img="./img/lupita.png">
-            </form>
-        </div>
-
-        <div id="cardsContainer" class="container-cards"></div>
-    </body>
-
-   
-
-    <footer class="container-img">
-        <div> <img src="../css/img/iconos/instagram2.png" alt="" class="img-redes">
-            <img src="../css/img/iconos/iconoF.png" alt="" class="img-redes">
-            <img src="../css/img/iconos/whatsap.png" alt="" class="img-redes">
-        </div>
-        <div>
-            <p class="cohort">Cohort</p>
-        </div>
-    </footer>
-    <script src="../js/main.js"></script>
-    <script src="../js/data.js"></script>
-    <script src="../js/past-events.js"></script>
 </html>
