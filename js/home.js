@@ -6,4 +6,4 @@ function goNext() {
   window.location.replace("../html/upcoming-events.html");
 }
 
-crearCards(data.events, "#cardsContainer");
+//crearCards(data.events, "#cardsContainer");

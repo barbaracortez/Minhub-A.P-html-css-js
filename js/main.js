@@ -12,7 +12,8 @@ function crearCards(arr, contenedor) {
           ${params.description}
         </p>
         <div class="pie">
-          <a class="more">
+          <a class="more-link"
+          href = '../html/details.html?id=${params._id}' >
             More information
           </a>
         </div>
@@ -20,6 +21,7 @@ function crearCards(arr, contenedor) {
     `
     })
 }
+
 
 function removeCards(contenedor) {
     const cardsContainer = document.querySelector(contenedor)
@@ -60,8 +62,8 @@ function getEventsByCategory(event) {
     }
 }
 
-const botonBuscar = document.getElementById('buscar');
-botonBuscar.addEventListener('click', (e) => {
+const botonBuscar = document.querySelector('#buscar');
+/* botonBuscar.addEventListener('click', (e) => {
     e.preventDefault();
     const valorBusqueda = document.getElementById('busqueda').value;
     console.log('Valor de búsqueda:', valorBusqueda);
@@ -79,4 +81,4 @@ botonBuscar.addEventListener('click', (e) => {
         removeCards("#cardsContainer");
         crearCards(data.events, "#cardsContainer");
     }
-});
+}); */
